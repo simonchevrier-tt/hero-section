@@ -86,6 +86,60 @@ export default {
       defaultValue: "",
       section: "settings",
     },
+    imageWidth: {
+      label: { en: "Image width", fr: "Largeur image" },
+      type: "Length",
+      defaultValue: "100%",
+      section: "settings",
+    },
+    imageHeight: {
+      label: { en: "Image height", fr: "Hauteur image" },
+      type: "Length",
+      defaultValue: "auto",
+      section: "settings",
+    },
+    imageMaxWidth: {
+      label: { en: "Image max width", fr: "Largeur max image" },
+      type: "Length",
+      defaultValue: "600px",
+      section: "settings",
+    },
+    imageMaxHeight: {
+      label: { en: "Image max height", fr: "Hauteur max image" },
+      type: "Length",
+      defaultValue: "none",
+      section: "settings",
+    },
+    imageFit: {
+      label: { en: "Image fit", fr: "Ajustement image" },
+      type: "TextSelect",
+      options: {
+        options: [
+          { value: "contain", label: { en: "Contain", fr: "Contenir" } },
+          { value: "cover", label: { en: "Cover", fr: "Couvrir" } },
+          { value: "fill", label: { en: "Fill", fr: "Remplir" } },
+          { value: "none", label: { en: "None", fr: "Aucun" } },
+          { value: "scale-down", label: { en: "Scale down", fr: "Réduire" } },
+        ],
+      },
+      defaultValue: "contain",
+      section: "settings",
+    },
+    imagePosition: {
+      label: { en: "Image position", fr: "Position image" },
+      type: "TextSelect",
+      options: {
+        options: [
+          { value: "center", label: { en: "Center", fr: "Centre" } },
+          { value: "top", label: { en: "Top", fr: "Haut" } },
+          { value: "bottom", label: { en: "Bottom", fr: "Bas" } },
+          { value: "left", label: { en: "Left", fr: "Gauche" } },
+          { value: "right", label: { en: "Right", fr: "Droite" } },
+        ],
+      },
+      defaultValue: "center",
+      section: "settings",
+    },
 
     // Colors
     backgroundColor: {

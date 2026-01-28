@@ -50,6 +50,7 @@
           :src="content.heroImage"
           alt="Hero image"
           class="hero-image"
+          :style="imageStyle"
         />
       </div>
     </div>
@@ -92,6 +93,16 @@ export default {
       return {
         borderColor: this.content.secondaryButtonBorderColor,
         color: this.content.secondaryButtonTextColor,
+      };
+    },
+    imageStyle() {
+      return {
+        width: this.content.imageWidth,
+        height: this.content.imageHeight,
+        maxWidth: this.content.imageMaxWidth,
+        maxHeight: this.content.imageMaxHeight,
+        objectFit: this.content.imageFit,
+        objectPosition: this.content.imagePosition,
       };
     },
   },
@@ -251,9 +262,6 @@ export default {
 }
 
 .hero-image {
-  width: 100%;
-  height: auto;
-  max-width: 100%;
-  object-fit: contain;
+  display: block;
 }
 </style>
